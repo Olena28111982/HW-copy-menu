@@ -1,0 +1,102 @@
+:root {
+  font-family: rubik, helvetica, arial, sans-serif;
+  font-size: 16px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: bisque;
+}
+.menu,
+.submenu {
+  list-style: none;
+  padding: 0;
+}
+.menu {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.submenu {
+  width: 300%;
+  position: absolute;
+  z-index: 10;
+}
+.submenu .submenu{
+  left: 100%;
+  top:30%
+}
+.menu-item {
+  display: inline-block;
+  position: relative;
+  margin: 0 40px;
+}
+.menu-item:first-child::before{
+  content:url(./assets/icons/books.svg) ;
+ width: 20px;
+ height: 20px;
+ display: inline-block;
+ }
+.menu-link,
+.submenu-link {
+  display: block;
+  padding: 0.5em 0.5em;
+  text-align: left;
+}
+.menu li ul{
+  display: none;
+}
+.menu li:hover >ul{
+  display: block;
+}
+
+.span-tooltip {
+  position: absolute;
+  width: 150%;
+  height: auto;
+  
+  
+  text-align: center;
+    background: rgb(255, 255, 255);
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  
+}
+
+.span-tooltip:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+  top: -20px;
+  left: 46%;
+}
+
+.span-tooltip-sub {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  line-height: 15px;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+    background: rgb(255, 255, 255);
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  
+}
+
+.span-tooltip-sub:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+   border-style: solid;
+  border-color: transparent transparent #ffffff transparent;}
+  
